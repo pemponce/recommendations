@@ -1,17 +1,17 @@
 package com.atrem.RecommendationsForMP.dto;
 
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class AccountDto {
+public class SignUpFormDto {
     private String login;
+    private String password;
     private String userName;
     private String userSecondName;
 }

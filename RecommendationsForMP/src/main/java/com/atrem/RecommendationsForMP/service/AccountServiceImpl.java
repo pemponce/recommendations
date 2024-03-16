@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AccountServiceImpl implements AccountService{
+public class AccountServiceImpl implements AccountService {
 
     @Autowired
     private AccountRepository accountRepository;
@@ -14,5 +14,10 @@ public class AccountServiceImpl implements AccountService{
     @Override
     public Account saveAccount(Account account) {
         return accountRepository.save(account);
+    }
+
+    @Override
+    public boolean existsByLoginAndPassword(String login, String password) {
+        return accountRepository.existsByLoginAndPassword(login, password);
     }
 }
