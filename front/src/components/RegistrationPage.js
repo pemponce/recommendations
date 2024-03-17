@@ -28,10 +28,8 @@ export default function RegistrationPage() {
         }).then(() => {
             console.log("new Person added");
             navigate('/login');
-            // Используем navigate для навигации
         }).catch(error => {
             console.error('Error registering:', error);
-            // Обработка ошибок, например, отображение сообщения пользователю
         });
     };
 

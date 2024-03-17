@@ -27,14 +27,12 @@ export default function LogInPage() {
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Неверный логин или пароль');
+                }else {
+                    navigate('/main');
                 }
-                return response.json();
-            })
-            .then(data => {
-                navigate('/main');
             })
             .catch(error => {
-                alert('Ошибка при отправке запроса:', error);
+                alert('Ошибка при отправке запроса:' + error);
             });
     };
 
