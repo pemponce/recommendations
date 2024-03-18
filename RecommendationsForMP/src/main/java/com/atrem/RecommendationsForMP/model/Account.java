@@ -3,6 +3,7 @@ package com.atrem.RecommendationsForMP.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

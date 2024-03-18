@@ -28,7 +28,8 @@ export default function LogInPage() {
                 if (!response.ok) {
                     throw new Error('Неверный логин или пароль');
                 }else {
-                    navigate('/main');
+                    // eslint-disable-next-line no-template-curly-in-string
+                    navigate('/profile/${login}');
                 }
             })
             .catch(error => {
